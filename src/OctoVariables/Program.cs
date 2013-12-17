@@ -30,8 +30,6 @@ namespace OctoVariables
             var factory = new CommandHandlerFactory();
             var commandHandler = factory.Create(command);
             commandHandler.Execute(command);
-
-            Console.ReadLine();
             
         }
     }

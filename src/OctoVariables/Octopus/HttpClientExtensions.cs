@@ -11,6 +11,11 @@ namespace OctoVariables.Octopus
             return response.Content.ReadAsAsync<TResource>().Result;
         }
 
+        public static void DeleteResource<TResource>(this HttpClient client, string requestUri)
+        {
+            var response = client.DeleteAsync(requestUri).Result;
+        }
+
 
     }
 }

@@ -40,7 +40,7 @@ namespace OctoVariables.Commands
                 var data = new VariableData();
                 data.Name = variable.Name;
                 data.Value = variable.Value;
-                data.Environment = environmentLookup[variable.EnvironmentId].Name;
+                data.Environment = !string.IsNullOrEmpty(variable.EnvironmentId)  ? environmentLookup[variable.EnvironmentId].Name : string.Empty;
                 data.Role = variable.Role;
                 data.Step = string.Empty;
 
